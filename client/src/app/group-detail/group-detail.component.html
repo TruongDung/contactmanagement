@@ -1,0 +1,9 @@
+
+<mat-card class="contact-card">
+    <mat-card-title>{{group.name}}</mat-card-title>
+    <mat-card-subtitle>{{group.description}}</mat-card-subtitle>
+    <mat-card-actions>
+        <button mat-mini-fab color="primary"(click)="onEdit(group)" matTooltip="Edit Group"><i class="material-icons">edit</i></button>
+        <button mat-mini-fab color="primary" (click)="onDelete(group.id)" matTooltip="Delete group"><i class="material-icons">delete</i></button>
+    </mat-card-actions>
+</mat-card>

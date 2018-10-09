@@ -1,0 +1,49 @@
+<div class="modal-header">
+  <h4 class="modal-title">Contact</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  </button>
+</div>
+<form (ngSubmit)="submitForm()" id="f_Contact" novalidate #f="ngForm">
+  <input type="hidden" name="contactid" [(ngModel)]="contact.id">
+  <input type="hidden" name="isSearching" [(ngModel)]="isSearch">
+
+  <div class="modal-body">
+    <div class="form-group" [ngClass]="{
+      'has-danger': fname.invalid && (fname.dirty || fname.touched),
+      'has-success': fname.valid && (fname.dirty || fname.touched)
+  }">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="fname" [(ngModel)]="contact.firstName" required #fname="ngModel">
+      <span class="alert-danger" *ngIf="fname.errors && (fname.dirty || fname.touched)">
+        <p *ngIf="fname.errors.required">First Name is required</p>
+      </span>
+    </div>
+
+    <div class="form-group" [ngClass]="{
+      'has-danger': lname.invalid && (lname.dirty || lname.touched),
+      'has-success': lname.valid && (lname.dirty || lname.touched)
+  }">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="lname" [(ngModel)]="contact.lastName" required #lname="ngModel">
+      <span class="alert-danger" *ngIf="fname.errors && (lname.dirty || lname.touched)">
+          <p *ngIf="lname.errors.required">Last Name is required</p>
+        </span>
+    </div>
+
+    <div class="form-group" [ngClass]= "{
+      'has-danger': eemail.invalid && (eemail.dirty || eemail.touched),
+      'has-success': eemail.valid && (eemail.dirty || eemail.touched)
+  }">
+      <label>Email</label>
+      <input type="text" class="form-control" name="eemail" [(ngModel)]="contact.email" required #eemail="ngModel">
+      <span class="alert-danger" *ngIf="eemail.errors && (eemail.dirty || eemail.touched)">
+          <p *ngIf="eemail.errors.required">Email is required</p>
+        </span>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="submit">
+      Save
+    </button>
+  </div>
+</form>

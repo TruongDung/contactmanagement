@@ -1,0 +1,19 @@
+<mat-progress-bar mode="indeterminate" style="margin:10px auto;" *ngIf="!contacts"></mat-progress-bar>
+
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-sm">
+            <a class="btn btn-primary"  mat-button (click)= "openFormModal()"> 
+                <i class="material-icons">add</i>
+                    Add New Contact
+            </a>
+        </div>
+        <div class="col-sm">
+            <input class="form-control" placeholder="Search contacts" matTooltip="Please input value then press Enter." (keypress)="onSearchingContact($event)" />
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+</div>
+
+<app-contact-card *ngFor="let contact of contacts" [contact]="contact" [contacts] ="self"></app-contact-card>
