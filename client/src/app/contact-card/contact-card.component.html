@@ -1,9 +1,0 @@
-<mat-card class="contact-card">
-  <mat-card-title>{{contact.firstName + ' ' + contact.lastName}}</mat-card-title>
-  <mat-card-subtitle><a href="mailto:{{contact.email}}">{{contact.email}}</a></mat-card-subtitle>
-  <mat-card-actions align="end">
-    <button mat-mini-fab color="primary"(click)="onEdit(contact)" matTooltip="Edit Contact"><i class="material-icons">edit</i></button>
-    <button mat-mini-fab color="primary" (click)="onDelete(contact.id)" matTooltip="Delete Contact"><i class="material-icons">delete</i></button>
-  </mat-card-actions>
-</mat-card>
-
