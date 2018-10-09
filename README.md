@@ -1,5 +1,3 @@
-# Full Stack Developer @ ThoughtTrace
-This is the coding challenge for applicants of the full stack developer position at ThoughtTrace.
 
 # Purpose of application
 This is a contact manager for managing people and their email addresses. Users of this application should be able to view/edit/add/delete their contacts.
