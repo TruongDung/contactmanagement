@@ -21,5 +21,4 @@ Add search to the application that allows users to type in a string value and re
 ## Contact Groups
 Add a new route/page to the application called "Groups". Should be accessible from the navbar and located at http://localhost:4200/groups. Add the ability to add/edit/delete a group. A group has a name, a description, and a collection of contacts. The Groups page should display each group and provide a UI to add and remove contacts from the group. A contact can belong to more than one group.
 
-# Submission
-Once these changes have been committed to your local Git repo, please bundle your changes using `git bundle` saving the file as `yourfirstname-yourlastname.bundle`, and email it to luke.lengl@thoughttrace.com.
+
